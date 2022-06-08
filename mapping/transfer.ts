@@ -7,8 +7,8 @@ const BI_ONE = BigInt.fromI32(1);
 export function handleTransfer(event: Transfer): void {
   let transfer = Exchange.load(event.transaction.hash.toHex());
   if(transfer == null)
-    transfer = new Exchange(event.transaction.hash.toHex());
-
+  transfer = new Exchange(event.transaction.hash.toHex());
+  //+-"toHex()":_It will transform the Values given into a LowerCase String.
   transfer.block = event.block.number;
   transfer.from = event.params.from.toHex();
   transfer.to = event.params.to.toHex();

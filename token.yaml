@@ -1,6 +1,7 @@
 specVersion: 0.0.2
 description: Token Subgraph API
 repository: https://github.com/zikyfranky/usdt-subgraph
+#+-This File is like the "package.json" of all the Graph.(https://www.redhat.com/en/topics/automation/what-is-yaml)
 schema:
   file: ./token.graphql
 dataSources:
@@ -10,6 +11,7 @@ dataSources:
     source:
       address: "0xdac17f958d2ee523a2206206994597c13d831ec7"
       abi: USDT
+      #+-This is the Ethereum MainNet Mined Block Number from where TheGraph will take the Starting Data.
       startBlock: 4634748
     mapping:
       kind: ethereum/events
@@ -22,5 +24,6 @@ dataSources:
         - name: USDT
           file: ./abis/USDT.json
       eventHandlers:
+          #+-Solidity S.C. Event that TheGraph will be Listening:_
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
