@@ -1,1 +1,1 @@
-# Find video tutorial [here](https://youtube.com/IsaacFrank).
+Learn what a SubGraph is, and how to build a SubGraph on the Graph Protocol, which helps you in indexing transactions(mostly events) and also provide you with an endpoint so as to query saved data(entities).
